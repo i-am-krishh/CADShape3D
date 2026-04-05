@@ -32,7 +32,7 @@ private:
     void drawHandles(const std::vector<QVector2D>& pts, float dotSize,
         QOpenGLShaderProgram* p);
 
-    QOpenGLBuffer            m_vbo;
-    QOpenGLBuffer            m_ibo;
+    QOpenGLBuffer m_vbo;
+    QOpenGLBuffer m_ibo;
     QOpenGLVertexArrayObject m_vao;
 };

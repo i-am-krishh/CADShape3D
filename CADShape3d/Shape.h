@@ -39,10 +39,10 @@ public:
     virtual void draw2D(GeometryEngine*, QOpenGLShaderProgram*) = 0;
     virtual void draw3D(GeometryEngine*, QOpenGLShaderProgram*) = 0;
 
-    virtual HandleType  hitTest(QVector2D mouse, float threshold) const = 0;
+    virtual HandleType hitTest(QVector2D mouse, float threshold) const = 0;
     virtual DragContext buildDragContext(HandleType h, QVector2D pressWorld) const = 0;
-    virtual void        applyDrag(const DragContext& ctx, QVector2D cur) = 0;
-    virtual void        clampToBounds(float halfW, float halfH) = 0;
+    virtual void applyDrag(const DragContext& ctx, QVector2D cur) = 0;
+    virtual void clampToBounds(float halfW, float halfH) = 0;
 
     virtual QString typeName() const = 0;
     virtual ~Shape() {}

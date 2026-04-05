@@ -98,11 +98,11 @@ void CADShape3d::paintGL() {
                 sel ? 0.2f : 1.0f);
             s->draw2D(m_geo, &m_prog);
 
-if (sel) {
-    s->isSelected = false; 
-    m_prog.setUniformValue("uColor", 1.0f, 1.0f, 1.0f);
-    s->draw2D(m_geo, &m_prog);
-}
+            if (sel) {
+                s->isSelected = false;
+                m_prog.setUniformValue("uColor", 1.0f, 1.0f, 1.0f);
+                s->draw2D(m_geo, &m_prog);
+            }
         }
         for (int i = 0; i < (int)m_shapes.size(); i++)
             m_shapes[i]->isSelected = (i == m_selectedIdx);

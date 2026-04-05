@@ -25,7 +25,6 @@ public:
     void setAddMode(AddShapeType t) { m_addMode = t; }
     void setViewMode(ViewMode mode) { m_viewMode = mode; update(); }
     void deleteSelectedPublic() { deleteSelected(); }
-    void toggleRotation(bool active);
 
 protected:
     void initializeGL()    override;
@@ -38,10 +37,10 @@ protected:
     void keyPressEvent(QKeyEvent* e) override;
 
 private:
-    void      initShaders();
-    void      deleteSelected();
+    void initShaders();
+    void deleteSelected();
     QVector2D pixelToWorld(const QPoint& p) const;
-    float     pixelThreshold() const;
+    float pixelThreshold() const;
 
     GeometryEngine* m_geo = nullptr;
     QOpenGLShaderProgram m_prog;
@@ -62,14 +61,14 @@ private:
     int m_selectedIdx = -1;
 
     DragContext m_drag;
-    bool        m_dragging = false;
+    bool m_dragging = false;
 
     AddShapeType m_addMode = ADD_SQUARE;
-    ViewMode     m_viewMode = VIEW_2D;
+    ViewMode m_viewMode = VIEW_2D;
 
-    float  m_orbitX = 25.0f;
-    float  m_orbitY = 30.0f;
+    float m_orbitX = 25.0f;
+    float m_orbitY = 30.0f;
     QPoint m_lastRMB;
-    bool   m_rmbDragging = false;
+    bool m_rmbDragging = false;
 
 };
