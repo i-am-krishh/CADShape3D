@@ -1,0 +1,32 @@
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+build/
+
+# Qt
+*.pro.user
+*.qmake.stash
+*.autosave
+
+# CMake (if you add later)
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
